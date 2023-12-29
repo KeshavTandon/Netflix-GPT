@@ -10,6 +10,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BACKGROUND_IMG_URL,PHOTO_URL } from "./constants";
 
 const Login = () => {
   const [isSignIn, setisSignIn] = useState(true);
@@ -42,7 +43,7 @@ const Login = () => {
           updateProfile(user, {
             displayName: name.current.value,
             photoURL:
-              "https://ih0.redbubble.net/image.618427277.3222/flat,1000x1000,075,f.u1.jpg",
+              {PHOTO_URL},
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -89,7 +90,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/f85718e8-fc6d-4954-bca0-f5eaf78e0842/ea44b42b-ba19-4f35-ad27-45090e34a897/IN-en-20230918-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={BACKGROUND_IMG_URL}
           alt="bg-image"
         ></img>
       </div>

@@ -29,3 +29,5 @@
 -Built Movie List
 -Built Movie Card
 -Fetch data of Popular,Upcoming,Trending Movies from TMDB API
+-Built the Gpt searchBar
+-Built the multi-language feature on Gpt Page
